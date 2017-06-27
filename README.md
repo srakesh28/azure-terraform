@@ -14,38 +14,37 @@ az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/${SUBSCRI
 # This should return JSON with the appId and password
 
 {
-  "appId": "12332skdu-we32-23df-se43-wew23243223",
+  "appId": "<your appid>",
   
-  "displayName": "azure-cli-2017-02-10-02-18-22",
+  "displayName": "azure-terraform",
   
-  "name": "http://azure-cli-2017-02-10-02-18-22",
+  "name": "http://azure-terraform",
   
-  "password": "jsiue981289-12-12er-we2344-23ksjksd",
+  "password": "<your_password>",
   
-  "tenant": "fo90dfoi-23-232ji-a233-c2389jkk2389832"
+  "tenant": "<your tenant_id>"
 } 
 
 # Step3) Create a terrafrom Variable Script called it variables.tf
 
 #variables.tf
 
-variable "tenant_id" {  
-
-default = "o90dfoi-23-232ji-a233-c2389jkk2389832"
+variable "tenant_id"
+{  
+    default = "<your tenant_id>"
 }
 
-variable "client_id" {  
-   
-   default="12332skdu-we32-23df-se43-wew23243223"
+variable "client_id" 
+{  
+    default="<your client_id"
 }
 
 variable "client_secret" {  
-    default="jsiue981289-12-12er-we2344-23ksjksd"
+    default="<your client_secret"
 }
 
 variable "subscription_id" {  
-  
-  default="ads238932-2323-209239-SUSI-02ksjdk"
+    default="your subscription_id"
 }
 
 
